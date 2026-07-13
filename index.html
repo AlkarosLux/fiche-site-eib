@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102a43"><meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Fiche de Site EIB">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="stylesheet" href="styles.css">
+  <title>Fiche de Site EIB</title>
+</head>
+<body>
+  <section id="lock-screen" class="lock-screen"><div class="lock-card">
+    <img src="icon.svg" alt="" class="lock-logo"><h1>Fiche de Site EIB</h1>
+    <p id="lock-help">Créez un code local d’au moins 6 caractères. Il sera demandé à chaque ouverture.</p>
+    <input id="passcode" type="password" minlength="6" autocomplete="current-password" placeholder="Code local">
+    <button id="unlock-button" class="primary">Créer et déverrouiller</button><p id="lock-error" class="error"></p>
+    <small>Le code n’est jamais envoyé. En cas d’oubli, les données chiffrées ne peuvent pas être récupérées.</small>
+  </div></section>
+  <div id="app" hidden>
+    <header><div><h1>Fiche de Site EIB</h1><p id="subtitle">Reconnaissance autonome sur iPhone</p></div><div class="lang"><button type="button" data-lang="fr" class="active">FR</button><button type="button" data-lang="en">EN</button></div></header>
+    <div id="offline-banner" class="offline" hidden>Mode hors ligne — saisie, photos et export Word disponibles.</div>
+    <nav id="section-nav"></nav><main><div id="status" class="status"></div><form id="site-form"><div id="sections"></div></form></main>
+    <footer class="actions"><button id="save-button" type="button" class="secondary">Enregistrer</button><button id="export-button" type="button" class="primary">Exporter Word</button></footer>
+    <div class="credit">Software by Clément SUDRE</div>
+  </div><script src="app.js"></script>
+</body></html>
